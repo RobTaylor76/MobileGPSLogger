@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.ineventofemergency.com/schema/LocationLogging" elementFormDefault="qualified" targetNamespace="http://www.ineventofemergency.com/schema/LocationLogging" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+  <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+  <xsd:simpleType name="CoordinateFormats">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DegreesDecimalMinutes" />
+      <xsd:enumeration value="DecimalDegrees" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Coordinate">
+    <xsd:sequence>
+      <xsd:element name="Latitude" type="xsd:string" />
+      <xsd:element name="Longitude" type="xsd:string" />
+      <xsd:element name="Format" type="CoordinateFormats" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Properties">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Property" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Credentials">
+    <xsd:sequence>
+      <xsd:element name="UserID" type="xsd:string" />
+      <xsd:element name="Password" type="xsd:string" />
+      <xsd:element name="AccessToken" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PositionalLogEntry">
+    <xsd:sequence>
+      <xsd:element name="Position" type="Coordinate" />
+      <xsd:element name="Date" type="xsd:date" />
+      <xsd:element name="Time" type="xsd:time" />
+      <xsd:element minOccurs="0" name="TrackID" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PositionalLogEntryRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Credentials" type="Credentials" />
+        <xsd:element maxOccurs="unbounded" name="LogEntry" type="PositionalLogEntry" />
+        <xsd:element minOccurs="0" name="Properties" type="Properties" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PositionalLogEntryResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ReturnCode" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

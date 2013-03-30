@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="Test1" total="2" failures="0" not-run="0" date="2011-08-25" time="19:18:48">
+  <environment nunit-version="2.4.2.0" clr-version="2.0.50727.1891" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Work\c#\GPSAssembly" machine-name="Z0018-8B71-1DF6" user="u771666" user-domain="UK" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite name="Test1" success="True" time="0.031" asserts="0">
+    <results>
+      <test-case name="TimeRecording.Test1.TestMethod1" executed="True" success="True" time="0.016" asserts="1" />
+      <test-case name="TimeRecording.Test1.TestMethod2" executed="True" success="True" time="0.000" asserts="1" />
+    </results>
+  </test-suite>
+</test-results>

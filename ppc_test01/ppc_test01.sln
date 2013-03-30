@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 9.00
+# SharpDevelop 2.0.0.1710
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppc_test01", "ppc_test01.csproj", "{6DF3A377-2E40-40EB-8982-398F627B39F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51B3610B-553E-4FF0-9470-DFF75CDE7DA4}"
+	ProjectSection(SolutionItems) = postProject
+		XmlParser.cs = XmlParser.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DF3A377-2E40-40EB-8982-398F627B39F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF3A377-2E40-40EB-8982-398F627B39F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF3A377-2E40-40EB-8982-398F627B39F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF3A377-2E40-40EB-8982-398F627B39F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal

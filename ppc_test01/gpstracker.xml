@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gpstracker>
+	
+    <GPSTrackFileName value="gpstrack.trk" />
+	
+	<GPSTrackTimeInterval value="5" />
+
+    <NMEALogFile value="nmealog.txt" />
+
+	<ErrorLogFile value="gpserrors.txt" />
+
+	<GPSCOMPort value="COM8" />
+
+</gpstracker>

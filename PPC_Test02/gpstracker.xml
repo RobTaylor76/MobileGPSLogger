@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gpstracker>
+	
+    <TrackingFileName value="\SD Card\GPSReader\data\gpstrack.trk" />
+	<TrackingTimeInterval value="5" />
+	<TrackingDatabase value="\SD Card\GPSReader\data\tracking.db" />
+
+    <NMEALogFile value="\SD Card\GPSReader\data\nmealog.txt" />
+
+	<ErrorLogFile value="\SD Card\GPSReader\data\gpserrors.txt" />
+
+	<GPS>
+		<COMPort value="COM1" />
+		<COMPortBaudRate value="4800" />
+		<COMPortTimeOut value="500" />
+	</GPS>
+
+</gpstracker>

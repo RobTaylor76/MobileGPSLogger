@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://www.ineventofemergency.com/wsdl/LocationLogging" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:ieoe="http://www.ineventofemergency.com/schema/LocationLogging" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ineventofemergency.com/wsdl/LocationLogging" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://www.ineventofemergency.com/schema/LocationLogging" location="ieoe.xsd" />
+  <wsdl:types />
+  <wsdl:message name="LogLocationRequestMessage">
+    <wsdl:part name="LogLocationRequest" element="ieoe:PositionalLogEntryRequest" />
+  </wsdl:message>
+  <wsdl:message name="LogLocationResponseMessage">
+    <wsdl:part name="LogLocationResponse" element="ieoe:PositionalLogEntryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LogLocationPort">
+    <wsdl:operation name="LogLocation">
+      <wsdl:input message="tns:LogLocationRequestMessage" />
+      <wsdl:output message="tns:LogLocationResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LogLocationSOAP" type="tns:LogLocationPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LogLocation">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://www.ineventofemergency.com/wsdl/LocationLogging" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://www.ineventofemergency.com/wsdl/LocationLogging" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LogLocationService">
+    <wsdl:port name="LogLocationPort" binding="tns:LogLocationSOAP">
+      <soap:address location="http://www.ineventofemergency.com/loglocation/service/LogLocationPort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
